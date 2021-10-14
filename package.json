@@ -2,8 +2,12 @@
   "name": "discordbot",
   "version": "1.0.0",
   "description": "bot for pcparadise",
-  "main": "src/main.js",
-  "scripts": {},
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "tslint -c tslint.json 'src/**/*.ts' && tsc && node dist/main.js",
+    "check": "tslint -c tslint.json 'src/**/*.ts' && prettier --check .",
+    "format": "prettier . --write"
+  },
   "author": "Arvinder Dhanoa",
   "license": "MIT",
   "devDependencies": {
