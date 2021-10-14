@@ -11,7 +11,7 @@
       let pkgs = nixpkgs.legacyPackages.${system}; 
       in {
         devShell = (pkgs.mkShell {
-          nativeBuildInputs = [ pkgs.nodePackages.node2nix pkgs.nodejs ]; 
+          nativeBuildInputs = [ pkgs.nodejs ]; 
           /* We want to use the npm lock-file as much as possible. 
           Not everyone uses nix. Everyone uses npm. */
           buildInputs = [];
