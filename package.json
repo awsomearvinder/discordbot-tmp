@@ -3,22 +3,19 @@
   "version": "1.0.0",
   "description": "bot for pcparadise",
   "main": "dist/main.js",
+  "type": "module",
   "scripts": {
-    "start": "eslint -c eslint.json 'src/**/*.ts' && tsc && node dist/main.js",
-    "check": "eslint -c eslint.json 'src/**/*.ts' && prettier --check .",
+    "start": "xo 'src/**/*.ts' && tsc && node dist/main.js",
+    "check": "xo 'src/**/*.ts' && prettier --check .",
     "format": "prettier . --write"
   },
   "author": "Arvinder Dhanoa",
   "license": "MIT",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
     "discord-api-types": "^0.23.1",
-    "eslint": "^8.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.4.1",
-    "typescript": "^4.4.4"
+    "typescript": "^4.4.4",
+    "xo": "^0.45.0"
   },
   "dependencies": {
     "discord.js": "^13.2.0"
