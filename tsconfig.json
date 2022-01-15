@@ -2,7 +2,7 @@
     "compilerOptions": {
         "lib": ["es2021"],
         "target": "es2021",
-        "module": "es2021",
+        "module": "es2020",
         "moduleResolution": "node",
         "strict": true,
         "skipLibCheck": true,
