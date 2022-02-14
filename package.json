@@ -5,8 +5,8 @@
   "main": "dist/main.js",
   "type": "module",
   "scripts": {
-    "start": "xo 'src/**/*.ts' && tsc && node dist/main.js",
-    "check": "xo 'src/**/*.ts' && prettier --check .",
+    "start": "xo 'src/' && tsc && node dist/main.js",
+    "check": "xo 'src/'",
     "format": "prettier . --write"
   },
   "author": "Arvinder Dhanoa",
