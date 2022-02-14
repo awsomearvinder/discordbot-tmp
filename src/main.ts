@@ -1,18 +1,22 @@
 import { Client, Intents } from "discord.js";
 
-let client = new Client({
-  intents: [
-    Intents.FLAGS.DIRECT_MESSAGES,
-    Intents.FLAGS.GUILD_MESSAGES,
-    Intents.FLAGS.GUILD_MEMBERS,
-  ],
-});
+async function main() {
+    const client = new Client({
+        intents: [
+            Intents.FLAGS.DIRECT_MESSAGES,
+            Intents.FLAGS.GUILD_MESSAGES,
+            Intents.FLAGS.GUILD_MEMBERS,
+        ],
+    });
 
-client.login("");
+    await client.login("");
 
-client.on("message", async (msg) => {
-  await msg.reply("test");
-  for (let item of msg.attachments) {
-    console.log(item[1].url);
-  }
-});
+    client.on("message", async (message) => {
+        await message.reply("test");
+        for (const item of message.attachments) {
+            console.log(item[1].url);
+        }
+    });
+}
+
+void main();
